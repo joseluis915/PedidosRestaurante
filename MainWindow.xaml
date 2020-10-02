@@ -74,6 +74,7 @@
                     <Label x:Name="TiempoCuchillosLabel" Content="00:00:00" HorizontalAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </StackPanel>
+            
             <!--—————————————————————————————————————————————[ Entregar pedido ]—————————————————————————————————————————————-->
             <Button x:Name="EntregaButton" Width="150" Height="40" Margin="0,20,0,0" Click="EntregaButton_Click" >
                 <StackPanel Orientation="Horizontal">
