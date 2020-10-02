@@ -1,0 +1,85 @@
+﻿<Window x:Class="PedidosRestaurante.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PedidosRestaurante"
+        mc:Ignorable="d"
+        Title="Pedidos restaurante" Height="480" Width="470" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" >
+            <!--—————————————————————————————————————————————[ Cantidad personas ]—————————————————————————————————————————————-->
+            <Label Content="Cantidad de personas:" FontWeight="Bold"/>
+            <TextBox x:Name="CantidadPersonasTextBox" Height="25" Width="150" HorizontalAlignment="Left"/>
+            <!--—————————————————————————————————————————————[ Tipos de platos ]—————————————————————————————————————————————-->
+            <Label Content="Tipo de plato:" FontWeight="Bold" Margin="0,5,0,0" />
+            <StackPanel Orientation="Horizontal" Margin="5,5,0,0">
+                <CheckBox Content="Entrada" x:Name="EntradaRadioButton" Margin="0,0,40,0" Checked="EntradaRadioButton_Checked"/>
+                <CheckBox Content="Plato fuerte" x:Name="PlatoFuerteRadioButton" Margin="0,0,40,0" Checked="PlatoFuerteRadioButton_Checked"/>
+                <CheckBox Content="Postre" x:Name="PostreRadioButton" Checked="PostreRadioButton_Checked" />
+            </StackPanel>
+            <!--—————————————————————————————————————————————[  ]—————————————————————————————————————————————-->
+            <Label Content="Selección de utencilio:" FontWeight="Bold" Margin="0,20,0,0" />
+            <StackPanel Orientation="Horizontal" Margin="5,5,0,0">
+                <CheckBox Content="Cubierto" x:Name="Cubierto_CheckBox" Margin="0,0,40,0"/>
+                <CheckBox Content="Cuchara" x:Name="Cuchara_CheckBox" Margin="0,0,40,0"/>
+                <CheckBox Content="Cuchara Postre" x:Name="CucharaPostre_CheckBox" Margin="0,0,40,0"/>
+                <CheckBox Content="Cuchillo" x:Name="Cuchillo_CheckBox" />
+            </StackPanel>
+            <!--—————————————————————————————————————————————[ Disponibilidad Utencilios ]—————————————————————————————————————————————-->
+            <Label Content="Disponibilidad de utencilios:" FontWeight="Bold" Margin="0,20,0,0" />
+            <!--——————————————————————————[ Cubiertos ]——————————————————————————-->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cubiertos" />
+                    <Label x:Name="CubiertosLabel" Content="3" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+                <!--——————————————————————————[ Cuchillos ]——————————————————————————-->
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cucharas"/>
+                    <Label x:Name="CucharasLabel" Content="4" HorizontalAlignment="Center" FontWeight="Bold" />
+                </StackPanel>
+                <!--——————————————————————————[ Cucharas de postre ]——————————————————————————-->
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cucharas de postre"/>
+                    <Label x:Name="CucharasPostreLabel" Content="3" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+                <!--——————————————————————————[ Cuchillos ]——————————————————————————-->
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Cuchillos"/>
+                    <Label x:Name="CuchillosLabel" Content="4" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+            <!--—————————————————————————————————————————————[  ]—————————————————————————————————————————————-->
+            <Label Content="Tiempo restante del utencilio:" FontWeight="Bold" Margin="0,5,0,0" />
+            <!--——————————————————————————[ Cubiertos ]——————————————————————————-->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cubierto" />
+                    <Label x:Name="TiempoCubiertosLabel" Content="00:00:00" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+                <!--——————————————————————————[ Cuchillos ]——————————————————————————-->
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cuchara"/>
+                    <Label x:Name="TiempoCucharasLabel" Content="00:00:00" HorizontalAlignment="Center" FontWeight="Bold" />
+                </StackPanel>
+                <!--——————————————————————————[ Cucharas de postre ]——————————————————————————-->
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <Label Content="Cuchara Postre"/>
+                    <Label x:Name="TiempoCucharasPostreLabel" Content="00:00:00" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+                <!--——————————————————————————[ Cuchillos ]——————————————————————————-->
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Cuchillo"/>
+                    <Label x:Name="TiempoCuchillosLabel" Content="00:00:00" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+            <!--—————————————————————————————————————————————[ Entregar pedido ]—————————————————————————————————————————————-->
+            <Button x:Name="EntregaButton" Width="150" Height="40" Margin="0,20,0,0" Click="EntregaButton_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Entregar pedido" FontWeight="Bold" FontSize="16" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
